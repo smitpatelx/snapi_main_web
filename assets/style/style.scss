@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '@fortawesome/fontawesome-free/css/all.css';
+
+//Custom Css imports
+@import './home';
+@import './global';
+
+body {
+  font-family: Open Sans, Helvetica, Arial, sans-serif !important;
+}

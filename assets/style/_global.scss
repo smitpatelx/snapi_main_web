@@ -1,0 +1,128 @@
+//buttons
+
+.is-blue {
+  color: #fff;
+  border-width: 1px;
+  border-color: transparent;
+  text-transform: uppercase;
+  border-radius: 18px;
+  background: #579dec;
+  transition: 0.5s all;
+
+  &:hover {
+    color: rgb(223, 223, 223);
+    border-color: rgb(223, 223, 223);
+    background: transparent;
+    transition: 0.5s all;
+  }
+}
+
+.is-white {
+  color: rgb(223, 223, 223);
+  border-width: 1px;
+  border-color: rgb(223, 223, 223);
+  text-transform: uppercase;
+  border-radius: 18px;
+  background: transparent;
+  transition: 0.5s all;
+
+  &:hover {
+    color: #fff;
+    border-color: #579dec;
+    background: #579dec;
+    transition: 0.5s all;
+  }
+}
+
+// animations
+.bounce-animation {
+  animation: bounce-anim 1.5s 0s infinite alternate;
+  transform: rotate(90deg);
+
+  @keyframes bounce-anim {
+    0% {
+      transform: translateY(0px) rotate(90deg);
+    }
+
+    25% {
+      transform: translateY(10px) rotate(0deg);
+    }
+
+    50% {
+      transform: translateY(-4px) rotate(-90deg);
+    }
+
+    75% {
+      transform: translateY(4px) rotate(0deg);
+    }
+
+    100% {
+      transform: translateY(-10px) rotate(90deg);
+    }
+  }
+}
+
+.services {
+  transition: 0.6s all;
+  min-width: 11rem;
+  border-radius: 0.5 rem;
+  border: 1px solid #fff;
+  border-image: url(/images/vectors/long-dash-border.svg) 1 round;
+
+  &:after,
+  &:before {
+    border: 0 solid #c7c7c7;
+  }
+
+  .services-img {
+    max-width: 120px;
+  }
+}
+
+@media (min-width: 500px) {
+  .sphere path {
+    stroke-width: .4px;
+  }
+}
+
+/* X Small(xs) */
+@media (min-width: 150px) {}
+
+/* Small (sm) */
+@media (min-width: 640px) {}
+
+/* Medium (md) */
+@media (min-width: 768px) {}
+
+/* Large (lg) */
+@media (min-width: 1024px) {
+  .is-blue {
+    color: #fff;
+    border-color: transparent;
+    background: #328af1;
+
+    &:hover {
+      color: #2976ce;
+      border-color: #2976ce;
+      background: transparent;
+    }
+  }
+
+  .is-white {
+    color: rgb(155, 155, 155);
+    border-color: rgb(155, 155, 155);
+    background: transparent;
+
+    &:hover {
+      color: #328af1;
+      border-color: #328af1;
+      background: transparent;
+    }
+  }
+}
+
+/* Extra Large (xl) */
+@media (min-width: 1280px) {}
+
+
+@media (min-width: 1480px) {}
