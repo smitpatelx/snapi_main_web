@@ -34,6 +34,23 @@
   }
 }
 
+.is-gray {
+  border-width: 1px;
+  text-transform: uppercase;
+  border-radius: 18px;
+  transition: 0.5s all;
+  color: rgb(155, 155, 155);
+  border-color: rgb(155, 155, 155);
+  background: transparent;
+
+  &:hover {
+    color: #328af1;
+    border-color: #328af1;
+    background: transparent;
+    transition: 0.5s all;
+  }
+}
+
 // animations
 .bounce-animation {
   animation: bounce-anim 1.5s 0s infinite alternate;

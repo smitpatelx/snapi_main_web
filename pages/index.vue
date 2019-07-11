@@ -120,7 +120,7 @@
       <div class="py-6 my-6">
         <a
           href="/docs"
-          class="inline-block lg:inline-block button is-white lg:px-5 lg:py-2 py-2 px-3 mb-4 lg:mb-0 mr-3 lg:mr-4 font-bold text-xs"
+          class="inline-block lg:inline-block button is-gray lg:px-5 lg:py-2 py-2 px-3 mb-4 lg:mb-0 mr-3 lg:mr-4 font-bold text-xs"
         >Read Docs for more</a>
       </div>
     </div>
