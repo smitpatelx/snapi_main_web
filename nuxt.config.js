@@ -68,5 +68,9 @@ module.exports = {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
-  }
+  },
+  /*
+   * Nuxt Generate For /dist
+   */
+  generate: {}
 }

@@ -10,10 +10,10 @@
         class="container text-center px-10 xl:px-0 antialiased flex items-center justify-between mx-auto overflow-hidden"
       >
         <a href="/" class="block text-center justify-between">
-          <img src="~/assets/images/logo/snapi-dblue.png" class="h-12 hidden lg:flex" alt="logo" />
+          <img src="~/assets/images/logo/snapi-dblue.png" class="h-10 hidden lg:flex" alt="logo" />
           <img src="~/assets/images/logo/snapi-white.png" class="h-10 flex lg:hidden" alt="logo" />
         </a>
-        <ul class="text-sm lg:text-lg text-white list-reset items-center md:flex hidden">
+        <ul class="text-sm lg:text-base text-white list-reset items-center md:flex hidden">
           <li>
             <a href="/docs" class="hover:text-gray-400 inline-block py-2 px-3 no-underline">Docs</a>
           </li>

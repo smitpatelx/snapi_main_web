@@ -14,7 +14,7 @@
             />
           </a>
         </div>
-        <div class="w-full md:w-3/4 flex text-sm lg:text-base mt-6 md:mt-0 justify-center">
+        <div class="w-full md:w-3/4 flex text-sm lg:text-sm mt-6 md:mt-0 justify-center">
           <ul
             v-for="(page, index) in pages"
             :key="index"
@@ -41,11 +41,11 @@
             <div
               class="inline-block pt-2 pb-3 px-2 md:px-6 mx-auto uppercase font-medium tracking-wide"
             >Socialize</div>
-            <div class="flex justify-start text-center mx-auto">
+            <div class="flex justify-start text-center content-between justify-between">
               <a
                 v-for="(social, index) in socials"
                 :key="index"
-                class="block flex items-center mr-3 no-underline text-white hover:text-gray-400"
+                class="block flex items-center no-underline text-white hover:text-gray-400"
                 :href="social.href"
                 :target="social.target_blank ? 'blank' : 'self'"
               >

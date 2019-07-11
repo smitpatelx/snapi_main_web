@@ -13,9 +13,9 @@
           />
         </div>
         <div class="items-left justify-center mb-8 block pt-2 lg:pt-20 pl-0 lg:pl-0">
-          <p class="text-2xl lg:text-4xl text-white lg:text-black">Administration Panel</p>
-          <p class="text-2xl lg:text-4xl font-bold text-white lg:text-black">for Nodejs</p>
-          <p class="text-white lg:text-gray-600 mt-4 font-normal text-lg lg:text-2xl">
+          <p class="text-2xl lg:text-3xl text-white lg:text-black">Administration Panel</p>
+          <p class="text-2xl lg:text-2xl font-semibold text-white lg:text-gray-600">for Nodejs</p>
+          <p class="text-white lg:text-gray-600 mt-4 font-normal text-lg lg:text-lg">
             <br />Featuring secure and scalable API.
             <br />With great UI and Documentation
             <br />to make you most productive developer.
