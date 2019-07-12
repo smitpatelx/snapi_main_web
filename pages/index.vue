@@ -36,7 +36,7 @@
             <br />by
             <strong>NETDEVV</strong>
           </p>
-          <div class="py-12">
+          <div class="py-12 mt-0 lg:mt-6">
             <a
               href="/register"
               class="inline-block lg:inline-block button is-blue lg:px-5 lg:py-2 py-2 px-3 mb-4 lg:mb-0 mr-3 lg:mr-4 font-bold text-xs"
