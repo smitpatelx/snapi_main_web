@@ -56,9 +56,9 @@
         </div>
       </section>
     </div>
-    <section class="font-sans flex flex-col w-full text-center items-center justify-center mt-10">
+    <section class="font-sans flex flex-col w-full text-center items-center justify-center mt-6">
       <a href="#pricing" class="bg-transparent">
-        <i class="fas fa-play fa-lg text-primary bounce-animation"></i>
+        <img src="~/assets/images/logo/arrow_down.svg" alt="🔰" class="anim-down" />
       </a>
     </section>
 
@@ -95,9 +95,11 @@
         Why
         <span class="text-primary font-bold">SNAPI</span>?
       </p>
-      <div class="flex flex-wrap flex-col md:flex-row justify-center text-center w-full mt-10">
+      <div
+        class="flex flex-wrap flex-col md:flex-row justify-center text-center w-full mt-10 px-4 lg:px-40"
+      >
         <div
-          class="w-full md:w-1/2 xl:w-2/6 flex flex-row p-3"
+          class="w-full md:w-1/2 xl:w-1/2 flex flex-row p-3"
           v-for="(feature, index) in features"
           :key="index"
         >
@@ -219,6 +221,33 @@ export default {
 </script>
 
 <style lang="scss">
+.anim-down {
+  height: 2rem;
+  animation: bounce-anim 2s 0s infinite alternate;
+
+  @keyframes bounce-anim {
+    0% {
+      transform: translateY(0px);
+    }
+
+    25% {
+      transform: translateY(20px);
+    }
+
+    50% {
+      transform: translateY(-8px);
+    }
+
+    75% {
+      transform: translateY(8px);
+    }
+
+    100% {
+      transform: translateY(-20px);
+    }
+  }
+}
+
 @media (min-width: 1480px) {
   body {
     background-size: 60% 730px;
