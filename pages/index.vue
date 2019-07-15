@@ -4,7 +4,7 @@
       <section
         class="font-sans w-full lg:w-1/2 bg-cover bg-primary lg:bg-transparent text-center lg:text-left flex flex-col items-center lg:items-left justify-start"
       >
-        <div class="w-full h-64 lg:hidden">
+        <div class="w-full h-64 mt-6 lg:hidden">
           <img
             src="~/assets/images/vectors/ill-2.svg"
             alt="server-iso"
@@ -13,8 +13,8 @@
           />
         </div>
         <div class="items-left justify-center mb-8 block pt-2 lg:pt-20 pl-0 lg:pl-0">
-          <p class="text-2xl lg:text-3xl text-white lg:text-black">Administration Panel</p>
-          <p class="text-2xl lg:text-2xl font-semibold text-white lg:text-gray-600">for Nodejs</p>
+          <p class="text-2xl lg:text-4xl text-white lg:text-black">Administration Panel</p>
+          <p class="text-2xl lg:text-4xl font-semibold text-white lg:text-gray-600">for Nodejs</p>
           <p class="text-white lg:text-gray-600 mt-4 font-normal text-lg lg:text-lg">
             <br />Featuring secure and scalable API.
             <br />With great UI and Documentation
@@ -36,7 +36,7 @@
             <br />by
             <strong>NETDEVV</strong>
           </p>
-          <div class="py-12 mt-0 lg:mt-6">
+          <div class="py-12 mt-0 lg:mt-12">
             <a
               href="/register"
               class="inline-block lg:inline-block button is-blue lg:px-5 lg:py-2 py-2 px-3 mb-4 lg:mb-0 mr-3 lg:mr-4 font-bold text-xs"
@@ -51,7 +51,7 @@
       <section
         class="font-sans w-full lg:w-1/2 bg-cover flex-col items-left justify-start hidden lg:flex flex-col bg-transparent"
       >
-        <div class="pt-20 pl-20 md:pl-4 xl:pl-16 w-full h-64">
+        <div class="pt-20 pl-20 lg:pl-4 xl:pl-32 w-full h-64">
           <img src="~/assets/images/vectors/ill-2.svg" alt="server-iso" style="min-width:30px;" />
         </div>
       </section>
@@ -66,11 +66,11 @@
       <div class="text-xl lg:text-3xl mt-6 px-0 flex flex-col">
         <p>Future of Admin-Panel with</p>
         <p>
-          <span class="text-primary">S</span>calable
-          <span class="text-primary">N</span>ode
-          <span class="text-primary">A</span>pplication
-          <span class="text-primary">P</span>rogramming
-          <span class="text-primary">I</span>nterface
+          <span class="text-primary font-semibold">S</span>calable
+          <span class="text-primary font-semibold">N</span>ode
+          <span class="text-primary font-semibold">A</span>pplication
+          <span class="text-primary font-semibold">P</span>rogramming
+          <span class="text-primary font-semibold">I</span>nterface
         </p>
       </div>
       <div class="text-lg lg:text-2xl py-4 my-2 flex flex-col lg:flex-row justify-center">
