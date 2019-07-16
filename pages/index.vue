@@ -96,10 +96,10 @@
         <span class="text-primary font-bold">SNAPI</span>?
       </p>
       <div
-        class="flex flex-wrap flex-col md:flex-row justify-center text-center w-full mt-10 px-4 lg:px-40"
+        class="flex flex-wrap flex-col md:flex-row justify-center text-center w-full mt-10 px-4 lg:px-30 xl:px-40"
       >
         <div
-          class="w-full md:w-1/2 xl:w-1/2 flex flex-row p-3"
+          class="w-full md:w-1/2 xl:w-1/2 flex flex-row px-1 lg:px-6 py-4 lg:py-8"
           v-for="(feature, index) in features"
           :key="index"
         >
@@ -107,14 +107,17 @@
             <i :class="feature.icon+' fa-3x text-blue-600'"></i>
           </div>
           <div class="text-left">
-            <p class="text-base md:text-lg text-gray-800 pb-3 font-bold">
+            <p class="text-sm md:text-sm text-gray-800 pb-3 font-bold">
               {{feature.heading}}
               <span
                 v-if="feature.new"
                 class="rounded-full uppercase px-2 py-1 text-xs font-bold mr-3 bg-primary text-white"
               >New</span>
             </p>
-            <p class="text-sm md:text-base text-gray-600">{{feature.description}}</p>
+            <p
+              class="text-sm md:text-sm text-gray-600 antialiased"
+              style="line-height: 1.7;"
+            >{{feature.description}}</p>
           </div>
         </div>
       </div>
