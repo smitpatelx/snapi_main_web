@@ -10,7 +10,7 @@
     >
       <span class="pl-2">Resources</span>
     </a>
-    <slide-y-down-transition>
+    <slide-y-down-transition class="mt-3">
       <div
         class="menubar rounded shadow-lg bg-white text-gray-600 absolute mt-0 flex flex-wrap text-left"
         v-if="notify"
