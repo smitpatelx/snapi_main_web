@@ -1,19 +1,18 @@
 <template>
   <div @mouseenter="toogleBar" @mouseleave="closeBar">
     <a
-      class="hover:text-gray-400 inline-block py-2 px-3 no-underline cursor-pointer"
+      class="hover:text-gray-400 inline-block py-2 mb-0 px-3 no-underline cursor-pointer"
       href="#"
       @focus="toogleBar"
       @click="toogleBar"
       @keydown.shift.tab="closeBar"
       @keydown.esc.exact="closeBar"
-    >
-      <span class="pl-2">Resources</span>
-    </a>
-    <slide-y-down-transition class="mt-3">
+    >Resources</a>
+    <slide-y-down-transition>
       <div
         class="menubar rounded shadow-lg bg-white text-gray-600 absolute mt-0 flex flex-wrap text-left"
         v-if="notify"
+        key="2"
       >
         <ul class="w-1/2 p-8 text-lg">
           <li class="pb-3 flex flex-row">

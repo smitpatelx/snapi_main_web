@@ -57,7 +57,7 @@
       </section>
     </div>
     <section class="font-sans flex flex-col w-full text-center items-center justify-center mt-6">
-      <a href="#pricing" class="bg-transparent">
+      <a v-scroll-to="'#why_snapi'" class="bg-transparent cursor-pointer">
         <img src="~/assets/images/logo/arrow_down.svg" alt="🔰" class="anim-down" />
       </a>
     </section>
@@ -90,8 +90,8 @@
     </section>
     <DarkNightUi></DarkNightUi>
     <!-- Start Features -->
-    <div class="flex flex-col flex-wrap p-6 lg:p-16 text-center bg-ui">
-      <p class="text-gray-600 text-xl md:text-4xl mt-16">
+    <div class="flex flex-col flex-wrap p-6 lg:pt-4 lg:px-16 text-center bg-ui" id="why_snapi">
+      <p class="text-gray-600 text-xl md:text-4xl mt-10">
         Why
         <span class="text-primary font-bold">SNAPI</span>?
       </p>
