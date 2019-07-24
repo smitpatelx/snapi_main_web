@@ -1,7 +1,7 @@
 <template>
   <div>
     <AppHeader></AppHeader>
-    <fade-transition origin="center" mode="out-in" :duration="300">
+    <fade-transition origin="center" mode="out-in" :duration="600">
       <nuxt />
     </fade-transition>
     <AppFooter></AppFooter>

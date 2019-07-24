@@ -58,10 +58,11 @@
       <div class="text-lg pt-4 mt-4 text-center">
         ©2019 NETDEVV
         <br />
-        <a
-          href="/terms"
+        <router-link
+          tag="a"
+          to="/terms"
           class="text-gray-300 hover:text-blue-200 no-underline hover:underline"
-        >Terms of service</a>
+        >Terms of service</router-link>
       </div>
     </footer>
   </div>
@@ -112,7 +113,7 @@ export default {
             },
             {
               link_label: "Privacy Policy",
-              link: "/ppolicy",
+              link: "/policy",
               router_link: true
             },
             {

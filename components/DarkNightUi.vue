@@ -22,7 +22,14 @@
           src="~/assets/images/uidesign/light.png"
           alt="light"
         />
-        <img v-else class="shadow-xl rounded-lg" src="~/assets/images/uidesign/dark.png" alt="dark" />
+      </slide-x-right-transition>
+      <slide-x-right-transition>
+        <img
+          v-if="!toogle"
+          class="shadow-xl rounded-lg"
+          src="~/assets/images/uidesign/dark.png"
+          alt="dark"
+        />
       </slide-x-right-transition>
     </div>
     <div class="px-2 lg:px-4 xl:px-48">
