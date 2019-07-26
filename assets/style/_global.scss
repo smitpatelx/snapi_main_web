@@ -99,6 +99,19 @@ $cl-l-grey: rgb(223, 223, 223);
   }
 }
 
+//Transition All
+.transition-1{
+  transition: all 0.5s;
+}
+
+.transition-2{
+  transition:  all 0.75s;
+}
+
+.transition-3{
+  transition: all 1s;
+}
+
 @media (min-width: 500px) {
   .sphere path {
     stroke-width: .4px;

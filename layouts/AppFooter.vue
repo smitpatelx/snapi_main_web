@@ -40,7 +40,7 @@
           <div class="flex flex-col justify-start px-2 md:px-6">
             <div
               class="inline-block pt-2 pb-3 px-2 md:px-6 mx-auto uppercase font-medium tracking-wide"
-            >Socialize</div>
+            >Get Help</div>
             <div class="flex justify-start text-center content-between justify-between">
               <a
                 v-for="(social, index) in socials"
