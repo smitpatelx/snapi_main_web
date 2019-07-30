@@ -9,10 +9,10 @@
       <div
         class="container text-center px-10 xl:px-8 antialiased flex items-center justify-between mx-auto overflow-hidden"
       >
-        <a href="/" class="block text-center justify-between">
+        <router-link tag="a" to="/" class="block text-center justify-between">
           <img src="~/assets/images/logo/snapi-dblue.png" class="h-10 hidden lg:flex" alt="logo" />
           <img src="~/assets/images/logo/snapi-white.png" class="h-10 flex lg:hidden" alt="logo" />
-        </a>
+        </router-link>
         <ul class="text-sm lg:text-base text-white list-reset items-center md:flex hidden">
           <li>
             <NavBarMenu />

@@ -11,6 +11,7 @@
 import { FadeTransition } from "vue2-transitions";
 import AppHeader from "./AppHeader";
 import AppFooter from "./AppFooter";
+import AOS from "aos";
 export default {
   data() {
     return {};
@@ -19,6 +20,13 @@ export default {
     FadeTransition,
     AppHeader,
     AppFooter
+  },
+  mounted() {
+    setTimeout(() => {
+      AOS.init({
+        disable: false
+      });
+    }, 300);
   }
 };
 </script>

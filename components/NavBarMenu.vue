@@ -152,5 +152,6 @@ export default {
 .menubar {
   width: 35rem;
   margin-left: -10rem;
+  z-index: 1000;
 }
 </style>

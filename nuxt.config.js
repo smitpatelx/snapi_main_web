@@ -50,8 +50,6 @@ module.exports = {
    ** Nuxt.js modules
    */
   modules: [
-    'vue-scrollto/nuxt',
-
     // Or if you have custom options...
     ['vue-scrollto/nuxt', {
       duration: 700

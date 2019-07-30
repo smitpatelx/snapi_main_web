@@ -1,20 +1,41 @@
 const express = require('express')
+const bodyParser = require('body-parser')
 const consola = require('consola')
-var session = require('express-session')
-var grant = require('grant-express')
+const session = require('express-session')
+const grant = require('grant-express')
 const {
   Nuxt,
   Builder
 } = require('nuxt')
 const app = express()
+const callbackRoutes = require('./auth/callback');
+const RedisStore = require('connect-redis')(session)
+
+app.use(bodyParser.json()) // for parsing application/json
+app.use(bodyParser.urlencoded({
+  extended: false
+})) // for parsing application/x-www-form-urlencoded
+app.use(express.json());
+app.use(express.urlencoded({
+  extended: false
+}));
+
+//Handels Auth Callbacks
+app.use(callbackRoutes);
 
 // REQUIRED: any session store - see /examples/express-session-stores
 app.use(session({
-  secret: 'grant'
+  store: new RedisStore(),
+  secret: 'grant',
+  resave: false,
+  saveUninitialized: true,
+  cookie: {
+    secure: true
+  }
 }))
 // mount grant
-app.use(grant({
-  /*configuration - see below*/ }))
+const grantConfig = require('./grant_config.js');
+app.use(grant(grantConfig))
 
 // Import and Set Nuxt.js options
 const config = require('../nuxt.config.js')

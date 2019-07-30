@@ -1,10 +1,6 @@
 <template>
   <div>
-    <form
-      class="flex flex-wrap flex-row justify-center my-10"
-      method="post"
-      @submit.prevent="login_form"
-    >
+    <form class="flex flex-wrap flex-row justify-center my-10" method="post" @submit.prevent>
       <div
         class="flex flex-col flex-wrap w-full sm:w-2/5 xl:w-1/4 text-center bg-white p-3 my-4 shadow-xl rounded-lg"
       >
@@ -12,19 +8,21 @@
         <div class="flex flex-wrap flex-row py-3">
           <button
             class="w-1/2 bg-primary text-white py-2 hover:bg-red-600 transition-1 border-2 border-solid border-white"
+            @click="google_auth"
           >
             <i class="fab fa-google fa-lg"></i>
           </button>
 
           <button
             class="w-1/2 bg-primary text-white py-2 hover:bg-black transition-1 border-2 border-solid border-white"
+            @click="github_auth"
           >
             <i class="fab fa-github fa-lg"></i>
           </button>
         </div>
         <p class="text-gray-500 font-semibold capitalize py-1">Login</p>
         <input
-          type="text"
+          type="email"
           v-model.trim="login"
           ref="login"
           placeholder="Email"
@@ -48,11 +46,11 @@
           </button>
         </div>
         <button
-          class="w-full bg-primary hover:bg-blue-700 text-white py-2 mt-2 transition-1 border-2 border-solid border-white"
+          class="w-full bg-primary hover:bg-transparent hover:text-primary text-white py-2 mt-2 transition-1 border border-solid border-white hover:border-blue-600"
           @click="login_form"
         >Login</button>
         <button
-          class="w-full bg-primary hover:bg-blue-700 text-white py-2 mt-2 transition-1 border-2 border-solid border-white"
+          class="w-full bg-primary hover:bg-transparent hover:text-primary text-white py-2 mt-2 transition-1 border border-solid border-white hover:border-blue-600"
           @click="reset_form"
         >Reset</button>
       </div>
@@ -61,6 +59,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
@@ -77,8 +76,20 @@ export default {
       this.login = null;
       this.password = null;
       this.$refs.login.focus();
+    },
+    google_auth() {
+      // window.location.href = '/connect/google';
+      var href = "/connect/google";
+      window.location.href = href;
+      // return !window.open(href, "Google", "width=500,height=700");
+    },
+    github_auth() {
+      var href = "/connect/github";
+      window.location.href = href;
+      // return !window.open(href, "Github", "width=500,height=700");
     }
-  }
+  },
+  created() {}
 };
 </script>
 
@@ -95,7 +106,7 @@ body {
 @media (min-width: 1480px) {
   body {
     background-size: 60% 730px;
-    background: url("../assets/images/vectors/home-banner-blue-swirl.svg")
+    background: url("../../assets/images/vectors/home-banner-blue-swirl.svg")
       no-repeat;
     background-position: 100.1% top;
     width: 100%;

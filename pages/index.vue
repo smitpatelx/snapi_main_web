@@ -74,15 +74,27 @@
         </p>
       </div>
       <div class="text-lg lg:text-2xl py-4 my-2 flex flex-col lg:flex-row justify-center">
-        <div class="p-2 subpixel-antialiased mx-5 my-2 lg:my-0 home-types-cards">
+        <div
+          class="p-2 subpixel-antialiased mx-5 my-2 lg:my-0 home-types-cards"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
           <p class="text-black">Semiannual</p>
           <p class="text-sm text-gray-500">Updates</p>
         </div>
-        <div class="p-2 subpixel-antialiased mx-5 my-2 lg:my-0 home-types-cards">
+        <div
+          class="p-2 subpixel-antialiased mx-5 my-2 lg:my-0 home-types-cards"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
           <p class="text-black">4.9 k</p>
           <p class="text-sm text-gray-500">Downloads</p>
         </div>
-        <div class="p-2 subpixel-antialiased mx-5 my-2 lg:my-0 home-types-cards">
+        <div
+          class="p-2 subpixel-antialiased mx-5 my-2 lg:my-0 home-types-cards"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
           <p class="text-black">Life-time</p>
           <p class="text-sm text-gray-500">Support</p>
         </div>
@@ -134,6 +146,7 @@
 
 <script>
 import DarkNightUi from "../components/DarkNightUi";
+
 export default {
   components: {
     DarkNightUi
