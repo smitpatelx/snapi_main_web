@@ -33,7 +33,7 @@ const config = {
     response: ["tokens", "jwt"],
     nonce: true,
     custom_params: {
-      "access_type": "offline"
+      // "access_type": "offline",
       //redirect_uri: 'http://localhost:8899/connect/google/callback'
     },
     callback: 'http://localhost:8899/connect/google/callback'

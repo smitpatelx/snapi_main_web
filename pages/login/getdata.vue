@@ -7,7 +7,7 @@
           data-aos="fade-down"
           data-aos-duration="600"
         >
-          Login with
+          Login with :
           <span class="font-semibold text-gray-600">{{query.client}}</span>
         </p>
         <p
@@ -15,18 +15,20 @@
           data-aos="fade-down"
           data-aos-duration="900"
         >
-          Requesting data to
-          <span class="font-semibold text-gray-600">{{query.client}}</span>
+          Resquest Status
+          <i class="fas fa-circle text-green-600" v-if="request_status"></i>
+          <i class="fas fa-circle text-red-600" v-else></i>
+          <!-- <span class="font-semibold text-gray-600">{{query.token_type}}</span> -->
         </p>
         <p
           class="text-lg text-gray-500 p-2 my-2 bg-gray-100 shadow-lg rounded-lg loading"
           data-aos="fade-down"
           data-aos-duration="1200"
         >
-          <i class="fas fa-circle"></i>
-          <i class="fas fa-circle"></i>
-          <i class="fas fa-circle"></i>
-          <i class="fas fa-circle"></i>
+          <i class="fas fa-circle fa-sm"></i>
+          <i class="fas fa-circle fa-sm"></i>
+          <i class="fas fa-circle fa-sm"></i>
+          <i class="fas fa-circle fa-sm"></i>
         </p>
       </div>
     </div>
@@ -47,12 +49,21 @@ export default {
       var query = this.$route.query;
       if (typeof query.client != "undefined") {
         this.query = query;
+        console.log(query);
       } else {
         this.$router.push("/login");
       }
     }
   },
-  computed: {},
+  computed: {
+    request_status() {
+      if (this.query.access_token.length > 10) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  },
   created() {
     this.getData();
   }
