@@ -15,7 +15,7 @@
           data-aos="fade-down"
           data-aos-duration="900"
         >
-          Resquest Status
+          Request Status
           <i class="fas fa-circle text-green-600" v-if="request_status"></i>
           <i class="fas fa-circle text-red-600" v-else></i>
           <!-- <span class="font-semibold text-gray-600">{{query.token_type}}</span> -->
@@ -49,7 +49,7 @@ export default {
       var query = this.$route.query;
       if (typeof query.client != "undefined") {
         this.query = query;
-        console.log(query);
+        // console.log(query);
       } else {
         this.$router.push("/login");
       }

@@ -18,7 +18,12 @@
             <NavBarMenu />
           </li>
           <li>
-            <a href="/docs" class="hover:text-gray-400 inline-block py-2 px-3 no-underline">Docs</a>
+            <router-link
+            tag="a"
+            to="/docs"
+            class="hover:text-gray-400 inline-block py-2 px-3 no-underline">
+            Docs
+            </router-link>
           </li>
           <li class="pr-2 justify-center content-center">
             <router-link

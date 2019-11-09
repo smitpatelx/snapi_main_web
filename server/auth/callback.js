@@ -3,6 +3,7 @@ const router = express.Router();
 const multer = require('multer'); // v1.0.5
 const upload = multer(); // for parsing multipart/form-data
 const paramFun = require('./requesting_params');
+const pToken = require('./process_token');
 const axios = require('axios');
 
 router.get('/connect/:client/callback', function (req, res, next) {
@@ -29,11 +30,13 @@ router.get('/connect/:client/callback', function (req, res, next) {
       paramFun.requesting_headers(callback_res),
     )
     .then(result => {
+      
       var data = {
         ...result.data,
         ...req.params
       };
-      res.redirect('/login/getdata?' + serialize(data));
+      pToken.process_token(data);
+      // res.redirect('/login/getdata?' + serialize(data));
     })
     .catch(error => {
       console.log(error);

@@ -37,6 +37,9 @@
         <div
           class="w-full md:1/2 lg:w-2/6 flex flex-row md:flex-col p-6 lg:p-10 rounded-lg my-2 lg:my-0"
           v-for="(feature, index) in features"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+          :data-aos-delay="(index+1)*100"
           :key="index"
         >
           <div class="flex item-start py-4 mr-8 lg:mr-0">

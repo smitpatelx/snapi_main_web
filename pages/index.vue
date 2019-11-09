@@ -21,17 +21,17 @@
             <br />to make you most productive developer.
             <br />Made with
             <span
-              class="rounded bg-white lg:bg-orange-600 text-blue-600 lg:text-white uppercase px-2 py-1 text-xs font-bold"
-            >JWT</span>
+              class="rounded bg-white lg:bg-orange-600 text-blue-600 lg:text-white px-2 py-1 text-xs font-bold"
+            >Passport</span>
             <span
-              class="rounded bg-white lg:bg-red-600 text-blue-600 lg:text-white uppercase px-2 py-1 text-xs font-bold"
-            >Redis</span>
+              class="rounded bg-white lg:bg-red-600 text-blue-600 lg:text-white px-2 py-1 text-xs font-bold"
+            >GraphQL</span>
             <span
-              class="rounded bg-white lg:bg-green text-blue-600 lg:text-white uppercase px-2 py-1 text-xs font-bold"
+              class="rounded bg-white lg:bg-green text-blue-600 lg:text-white px-2 py-1 text-xs font-bold"
             >Vue-Js</span>
             and
             <span
-              class="rounded bg-white lg:bg-teal-400 text-blue-600 lg:text-white uppercase px-2 py-1 text-xs font-bold"
+              class="rounded bg-white lg:bg-teal-400 text-blue-600 lg:text-white px-2 py-1 text-xs font-bold"
             >Tailwind</span>
             <br />by
             <strong>NETDEVV</strong>
@@ -64,13 +64,13 @@
 
     <section class="font-sans container m-auto flex flex-col text-center px-6 py-6">
       <div class="text-xl lg:text-3xl mt-6 px-0 flex flex-col">
-        <p>Future of Admin-Panel with</p>
+        <p class="text-lg lg:text-2xl text-gray-600">Future of Admin-Panel</p>
         <p>
-          <span class="text-primary font-semibold">S</span>calable
-          <span class="text-primary font-semibold">N</span>ode
-          <span class="text-primary font-semibold">A</span>pplication
-          <span class="text-primary font-semibold">P</span>rogramming
-          <span class="text-primary font-semibold">I</span>nterface
+          <span class="text-gray-600 font-semibold">S</span>calable
+          <span class="text-gray-600 font-semibold">N</span>ode
+          <span class="text-gray-600 font-semibold">A</span>pplication
+          <span class="text-gray-600 font-semibold">P</span>rogramming
+          <span class="text-gray-600 font-semibold">I</span>nterface
         </p>
       </div>
       <div class="text-lg lg:text-2xl py-4 my-2 flex flex-col lg:flex-row justify-center">
@@ -114,6 +114,9 @@
           class="w-full md:w-1/2 xl:w-1/2 flex flex-row px-1 lg:px-6 py-4 lg:py-8"
           v-for="(feature, index) in features"
           :key="index"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+          :data-aos-delay="(index+1)*20"
         >
           <div class="flex item-start py-2 pr-8">
             <i :class="feature.icon+' fa-3x text-blue-600'"></i>
@@ -139,6 +142,19 @@
           href="/docs"
           class="inline-block lg:inline-block button is-gray lg:px-5 lg:py-2 py-2 px-3 mb-4 lg:mb-0 mr-3 lg:mr-4 font-bold text-xs"
         >Read Docs for more</a>
+      </div>
+    </div>
+    <!-- Start News Letter -->
+    <div class="text-white shadow-inner flex flex-wrap flex-row px-6 md:px-10 py-6 md:py-12 bg-gray-200">
+      <div class="w-full md:w-1/3 justify-center text-center md:text-left flex flex-wrap flex-col content-center">
+        <p class="text-2xl font-semibold text-blue-600">Subscribe to news letter</p>
+        <p class="text-lg text-gray-600">To get our latest updates</p>
+      </div>
+      <div class="w-full md:w-2/3 flex flex-wrap content-center justify-center pt-2 md:pt-0">
+        <div class="flex flex-wrap flex-row">
+          <input type="email" name="email" placeholder="example@netdevv.com" class="focus:outline-none focus:shadow-outline rounded-l-lg text-lg text-gray-500 py-2 px-2 md:px-6 shadow-lg">
+          <button class="focus:outline-none focus:shadow-outline bg-primary hover:bg-blue-600 text-blue-100 text-sm rounded-r-lg py-2 px-3 shadow-lg"><i class="far fa-newspaper fa-lg"></i></button>
+        </div>
       </div>
     </div>
   </div>

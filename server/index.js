@@ -2,40 +2,38 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const consola = require('consola')
 const session = require('express-session')
-const grant = require('grant-express')
 const {
   Nuxt,
   Builder
 } = require('nuxt')
 const app = express()
-const callbackRoutes = require('./auth/callback');
-const RedisStore = require('connect-redis')(session)
+const authRoutes = require('./routes/auth');
+// const RedisStore = require('connect-redis')(session)
 
-app.use(bodyParser.json()) // for parsing application/json
+//Database Test
+require('./database/test_db');
+
+// for parsing application/json
+app.use(bodyParser.json());
+// for parsing application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({
   extended: false
-})) // for parsing application/x-www-form-urlencoded
+}));
 app.use(express.json());
 app.use(express.urlencoded({
   extended: false
 }));
 
-//Handels Auth Callbacks
-app.use(callbackRoutes);
-
-// REQUIRED: any session store - see /examples/express-session-stores
 app.use(session({
-  store: new RedisStore(),
-  secret: 'grant',
-  resave: false,
-  saveUninitialized: true,
-  cookie: {
-    secure: true
-  }
-}))
-// mount grant
-const grantConfig = require('./grant_config.js');
-app.use(grant(grantConfig))
+  secret: 'asdasdsad',
+  resave: true,
+  saveUninitialized: true
+}));
+
+require('./config/passport-config');
+
+//Auth routes setup
+app.use('/auth', authRoutes);
 
 // Import and Set Nuxt.js options
 const config = require('../nuxt.config.js')

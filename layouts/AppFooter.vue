@@ -18,34 +18,34 @@
           <ul
             v-for="(page, index) in pages"
             :key="index"
-            class="list-reset font-thin flex flex-col text-left px-2 md:px-6"
+            class="list-reset font-thin w-full md:w-1/3 flex flex-wrap flex-col text-left px-2 md:px-6 content-center"
           >
             <p
-              class="inline-block py-2 px-2 md:px-6 uppercase no-underline font-medium tracking-wide"
+              class="inline-block py-2 px-1 md:px-6 uppercase no-underline font-medium tracking-wide"
             >{{page.label}}</p>
             <li v-for="(links, index2) in page.links" :key="index2">
               <router-link
                 tag="a"
                 :to="links.link"
                 v-if="links.router_link"
-                class="text-gray-300 hover:text-gray-500 inline-block py-2 px-2 md:px-6 no-underline"
+                class="text-gray-100 hover:text-gray-500 inline-block py-2 px-1 md:px-6 no-underline"
               >{{links.link_label}}</router-link>
               <a
                 :href="links.link"
                 v-else
-                class="text-gray-300 hover:text-gray-500 inline-block py-2 px-2 md:px-6 no-underline"
+                class="text-gray-100 hover:text-gray-500 inline-block py-2 px-1 md:px-6 no-underline"
               >{{links.link_label}}</a>
             </li>
           </ul>
-          <div class="flex flex-col justify-start px-2 md:px-6">
+          <div class="w-full md:w-1/3 flex flex-wrap flex-col justify-start px-1 md:px-6 content-center">
             <div
-              class="inline-block pt-2 pb-3 px-2 md:px-6 mx-auto uppercase font-medium tracking-wide"
+              class="inline-block pt-2 pb-3 px-1 md:px-6 mx-auto uppercase font-medium tracking-wide"
             >Get Help</div>
             <div class="flex justify-start text-center content-between justify-between">
               <a
                 v-for="(social, index) in socials"
                 :key="index"
-                class="block flex items-center no-underline text-white hover:text-gray-400"
+                class="block flex items-center mx-3 no-underline text-white hover:text-gray-400"
                 :href="social.href"
                 :target="social.target_blank ? 'blank' : 'self'"
               >
@@ -56,13 +56,13 @@
         </div>
       </div>
       <div class="text-lg pt-4 mt-4 text-center">
-        ©2019 NETDEVV
-        <br />
+        <a href="https://netdevv.com" class="hover:text-gray-300">©2019 Netdevv Co.</a>
+        <!-- <br />
         <router-link
           tag="a"
           to="/terms"
           class="text-gray-300 hover:text-blue-200 no-underline hover:underline"
-        >Terms of service</router-link>
+        >Terms of service</router-link> -->
       </div>
     </footer>
   </div>

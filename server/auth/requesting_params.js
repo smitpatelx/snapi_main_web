@@ -1,4 +1,4 @@
-const gc = require('../grant_config');
+const gc = require('../config/grant_config');
 var google = gc.google;
 var github = gc.github;
 

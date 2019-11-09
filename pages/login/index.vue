@@ -1,58 +1,63 @@
 <template>
-  <div>
-    <form class="flex flex-wrap flex-row justify-center my-10" method="post" @submit.prevent>
+  <div class="login_form">
+    <form class="flex flex-wrap flex-row justify-center py-10 px-4 md:px-2" method="post" @submit.prevent>
       <div
-        class="flex flex-col flex-wrap w-full sm:w-2/5 xl:w-1/4 text-center bg-white p-3 my-4 shadow-xl rounded-lg"
+        class="flex flex-col flex-wrap bg-white w-full sm:w-2/5 lg:w-1/4 text-center bg-white my-4 shadow-xl rounded-lg"
       >
-        <p class="text-gray-500 font-semibold capitalize py-1">Login with social-media</p>
-        <div class="flex flex-wrap flex-row py-3">
-          <button
-            class="w-1/2 bg-primary text-white py-2 hover:bg-red-600 transition-1 border-2 border-solid border-white"
-            @click="google_auth"
-          >
-            <i class="fab fa-google fa-lg"></i>
-          </button>
+        <div class="p-3">
+          <div class="flex flex-wrap justify-center py-3">
+            <a
+              class="focus:outline-none focus:shadow-outline bg-gray-500 hover:bg-gray-600 text-white py-2 px-12 rounded-lg"
+              href="/auth/google"
+            >
+              <i class="fab fa-google fa-lg"></i>
+            </a>
 
-          <button
-            class="w-1/2 bg-primary text-white py-2 hover:bg-black transition-1 border-2 border-solid border-white"
-            @click="github_auth"
-          >
-            <i class="fab fa-github fa-lg"></i>
-          </button>
+            <a
+              class="focus:outline-none focus:shadow-outline bg-gray-500 hover:bg-gray-600 text-white py-2 px-12 ml-3 rounded-lg"
+              href="/auth/github"
+            >
+              <i class="fab fa-github fa-lg"></i>
+            </a>
+          </div>
         </div>
-        <p class="text-gray-500 font-semibold capitalize py-1">Login</p>
-        <input
-          type="email"
-          v-model.trim="login"
-          ref="login"
-          placeholder="Email"
-          class="p-2 my-1 border-2 border-solid border-primary w-full"
-          autocomplete="current-email"
-        />
-        <div class="flex flex-row flex-wrap my-1 border-2 border-solid border-primary w-full">
+        <div class="px-3 pt-10 pb-4">
           <input
-            :type="password_show ? 'text' : 'password'"
-            v-model.trim="password"
-            ref="password"
-            placeholder="**********"
-            class="p-2 w-5/6"
-            autocomplete="current-password"
+            type="email"
+            v-model.trim="login"
+            ref="login"
+            placeholder="Email"
+            class="focus:outline-none focus:shadow-outline py-2 px-4 my-1 w-full rounded-lg shadow-xl-e"
+            autocomplete="current-email"
+            autofocus
           />
-          <button
-            class="bg-gray-300 hover:bg-gray-400 py-2 px-3 transition-1 w-1/6"
-            @click="password_show = !password_show"
-          >
-            <i :class="password_show ? 'fas fa-eye-slash' : 'fas fa-eye'"></i>
-          </button>
+          <div class="flex flex-row flex-wrap my-1 shadow-lg rounded-lg w-full">
+            <input
+              :type="password_show ? 'text' : 'password'"
+              v-model.trim="password"
+              ref="password"
+              placeholder="**********"
+              class="focus:outline-none focus:shadow-outline py-2 px-4 w-5/6 rounded-l-lg"
+              autocomplete="current-password"
+            />
+            <button
+              class="focus:outline-none focus:shadow-outline bg-gray-600 hover:bg-gray-500 py-2 px-3 transition-1 w-1/6 rounded-r-lg text-white"
+              @click="password_show = !password_show"
+            >
+              <i :class="password_show ? 'fas fa-eye-slash' : 'fas fa-eye'"></i>
+            </button>
+          </div>
+          <div class="w-full flex flex-wrap flex-row py-3 justify-center py-2">
+            <button
+              class="focus:outline-none focus:shadow-outline bg-primary-400 hover:bg-primary-200 rounded-lg text-white py-2 px-6 transition-1 shadow-md font-semibold"
+              @click="login_form"
+            >Login</button>
+            <button
+              class="focus:outline-none focus:shadow-outline bg-gray-600 hover:bg-gray-500 rounded-lg text-white py-2 px-6 ml-3 transition-1 shadow-md font-semibold"
+              @click="reset_form"
+            >Reset</button>
+          </div>
         </div>
-        <button
-          class="w-full bg-primary hover:bg-transparent hover:text-primary text-white py-2 mt-2 transition-1 border border-solid border-white hover:border-blue-600"
-          @click="login_form"
-        >Login</button>
-        <button
-          class="w-full bg-primary hover:bg-transparent hover:text-primary text-white py-2 mt-2 transition-1 border border-solid border-white hover:border-blue-600"
-          @click="reset_form"
-        >Reset</button>
       </div>
     </form>
   </div>
@@ -94,12 +99,15 @@ export default {
 </script>
 
 <style lang="scss">
-body {
+.login_form {
   background: #2366ce;
 }
 
 @media (min-width: 1024px) {
   body {
+    background: transparent;
+  }
+  .login_form {
     background: transparent;
   }
 }
