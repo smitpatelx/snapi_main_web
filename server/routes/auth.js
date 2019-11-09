@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const passport = require('passport');
-const clients = require('../config/auth-clients');
+const clients = require('../config/auth-clients.js');
 
 //Logout
 router.get('/logout', (req, res) => {
