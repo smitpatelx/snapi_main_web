@@ -41,7 +41,9 @@ export default {
   components: {},
   data() {
     return {
-      query: {}
+      query: {
+        access_token:''
+      }
     };
   },
   methods: {
