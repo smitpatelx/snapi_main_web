@@ -3,7 +3,17 @@ module.exports = {
   theme: {
     backgroundColor: theme => ({
       ...theme('colors'),
-      'primary': '#2366ce',
+      'primary-100': '#739DDF',
+      'primary-200': '#5F8FDB',
+      'primary-300': '#4B81D6',
+      'primary-400': '#3773D2',
+      'primary-500': '#2366CE',
+      'primary-600': '#205DBC',
+      'primary-700': '#1D54A9',
+      'primary-800': '#1A4B96'
+    }),
+    textColor: theme => ({
+      ...theme('colors'),
       'primary-100': '#739DDF',
       'primary-200': '#5F8FDB',
       'primary-300': '#4B81D6',
@@ -12,11 +22,17 @@ module.exports = {
       'primary-600': '#205DBC',
       'primary-700': '#1D54A9',
       'primary-800': '#1A4B96',
-      'green': '#41b883'
     }),
-    textColor: theme => ({
+    borderColor: theme => ({
       ...theme('colors'),
-      'primary': '#2366ce'
+      'primary-100': '#739DDF',
+      'primary-200': '#5F8FDB',
+      'primary-300': '#4B81D6',
+      'primary-400': '#3773D2',
+      'primary-500': '#2366CE',
+      'primary-600': '#205DBC',
+      'primary-700': '#1D54A9',
+      'primary-800': '#1A4B96',
     }),
     boxShadow: {
       'default': '0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06)',

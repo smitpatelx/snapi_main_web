@@ -4,10 +4,6 @@
 
 @import '@fortawesome/fontawesome-free/css/all.css';
 @import 'aos/dist/aos.css';
-//Custom Css imports
-@import './home';
-@import './global';
 
-body {
-  font-family: Open Sans, Helvetica, Arial, sans-serif !important;
-}
+//Custom Css imports
+@import './global';

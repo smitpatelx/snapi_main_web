@@ -9,26 +9,17 @@
         <span class="rounded-full border w-6 h-6 border-grey shadow-inner bg-white shadow"></span>
       </span>
       <p
-        class="text-xl mt-2"
-        :class="toogle ? 'text-white' : 'text-black'"
+        class="text-3xl font-bold mt-2"
+        :class="toogle ? 'text-white' : 'text-gray-500'"
         v-html="toogle ? 'Light UI' : 'Dark UI'"
       ></p>
     </div>
-    <div class="w-full px-2 lg:px-32">
+    <div class="w-full px-2 lg:px-32" style="min-height: auto;">
       <slide-x-right-transition>
         <img
-          v-if="toogle"
           class="shadow-xl rounded-lg"
-          src="~/assets/images/uidesign/light.png"
-          alt="light"
-        />
-      </slide-x-right-transition>
-      <slide-x-right-transition>
-        <img
-          v-if="!toogle"
-          class="shadow-xl rounded-lg"
-          src="~/assets/images/uidesign/dark.png"
-          alt="dark"
+          :src="toogle ? `/_nuxt/assets/images/uidesign/light.png` : `/_nuxt/assets/images/uidesign/dark.png`"
+          :alt="toogle ? 'light-ui' : 'dark-ui'"
         />
       </slide-x-right-transition>
     </div>
@@ -86,7 +77,7 @@ export default {
       ]
     };
   },
-  methods: {}
+  methods: {},
 };
 </script>
 

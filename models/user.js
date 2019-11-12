@@ -6,7 +6,8 @@ const Model = Sequelize.Model;
 class User extends Model {}
 User.init({
   id:{
-    type: Sequelize.UUID,
+    type: Sequelize.UUIDV4,
+    defaultValue: Sequelize.UUIDV4,
     allowNull: false,
     unique: true,
     primaryKey: true
@@ -21,23 +22,23 @@ User.init({
   },
   title: {
     type: Sequelize.STRING(4),
-    allowNull: false
+    allowNull: true
   },
   address:{
     type: Sequelize.STRING(200),
-    allowNull: false
+    allowNull: true
   },
   state:{
     type: Sequelize.STRING(20),
-    allowNull: false
+    allowNull: true
   },
   country:{
     type: Sequelize.STRING(2),
-    allowNull: false
+    allowNull: true
   },
   pin_code:{
     type: Sequelize.STRING(10),
-    allowNull: false
+    allowNull: true
   },
   primary_email:{
     type: Sequelize.STRING,
@@ -75,7 +76,7 @@ User.init({
   },
   password:{
     type: Sequelize.STRING,
-    allowNull: false
+    allowNull: true
   },
   google_id:{
     type: Sequelize.STRING,
@@ -105,7 +106,7 @@ User.init({
     type: Sequelize.STRING,
     allowNull: true
   }
-}, { 
+}, {
   sequelize,
   modelName: 'user'
 });

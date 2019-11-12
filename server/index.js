@@ -1,16 +1,20 @@
+require('dotenv').config();
+var env = process.env;
+
 const express = require('express')
 const bodyParser = require('body-parser')
 const consola = require('consola')
 const session = require('express-session')
+const passport = require('passport')
+const cookieSession = require('cookie-session')
+const app = express()
+const authRoutes = require('./routes/auth');
 const {
   Nuxt,
   Builder
 } = require('nuxt')
-const app = express()
-const authRoutes = require('./routes/auth');
-// const RedisStore = require('connect-redis')(session)
 
-//Database Test
+//Database Connect
 require('./database/test_db');
 
 // for parsing application/json
@@ -19,19 +23,26 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: false
 }));
-app.use(express.json());
-app.use(express.urlencoded({
-  extended: false
+
+// app.use(express.json());
+// app.use(express.urlencoded({
+//   extended: false
+// }));
+
+app.use(cookieSession({
+  maxAge: 30*24*60*60*1000,
+  keys: [env.PASSPORT_SECRET]
 }));
 
-app.use(session({
-  secret: 'asdasdsad',
-  resave: true,
-  saveUninitialized: true
-}));
+// app.use(session({
+//   secret: env.PASSPORT_SECRET,
+//   resave: true,
+//   saveUninitialized: true
+// }));
 
+app.use(passport.initialize());
+app.use(passport.session());
 require('./config/passport-config');
-
 //Auth routes setup
 app.use('/auth', authRoutes);
 
@@ -61,7 +72,8 @@ async function start() {
 
   // Listen the server
   app.listen(port, host)
-  consola.ready({
+  consola.info({
+    level: 3,
     message: `Server listening on http://${host}:${port}`,
     badge: true
   })

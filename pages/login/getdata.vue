@@ -7,8 +7,16 @@
           data-aos="fade-down"
           data-aos-duration="600"
         >
-          Login with :
-          <span class="font-semibold text-gray-600">{{query.client}}</span>
+          ID :
+          <span class="font-semibold text-gray-600">{{query.id}}</span>
+        </p>
+        <p
+          class="text-lg text-gray-500 p-2 my-2 bg-gray-100 shadow-lg rounded-lg"
+          data-aos="fade-down"
+          data-aos-duration="600"
+        >
+          Client :
+          <span class="font-semibold text-gray-600">{{client}}</span>
         </p>
         <p
           class="text-lg text-gray-500 p-2 my-2 bg-gray-100 shadow-lg rounded-lg"
@@ -42,16 +50,16 @@ export default {
   data() {
     return {
       query: {
-        access_token:''
       }
     };
   },
   methods: {
     getData() {
       var query = this.$route.query;
-      if (typeof query.client != "undefined") {
+      console.log(query);
+
+      if (typeof query.id != "undefined") {
         this.query = query;
-        // console.log(query);
       } else {
         this.$router.push("/login");
       }
@@ -59,10 +67,19 @@ export default {
   },
   computed: {
     request_status() {
-      if (this.query.access_token.length > 10) {
+      if ((typeof this.query.google_token != "undefined") || (typeof this.query.github_token != "undefined")) {
         return true;
       } else {
         return false;
+      }
+    },
+    client(){
+      if(this.query.google_token.length > 5){
+        return "Google";
+      } else if (this.query.github_token.length > 5){
+        return "Github";
+      } else {
+        return "Local";
       }
     }
   },

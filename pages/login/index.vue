@@ -2,61 +2,74 @@
   <div class="login_form">
     <form class="flex flex-wrap flex-row justify-center py-10 px-4 md:px-2" method="post" @submit.prevent>
       <div
-        class="flex flex-col flex-wrap bg-white w-full sm:w-2/5 lg:w-1/4 text-center bg-white my-4 shadow-xl rounded-lg"
+        class="border-2 border-solid border-gray-500 flex flex-col flex-wrap bg-white w-full sm:w-2/5 lg:w-1/4 text-center bg-white my-4 shadow-xl rounded-lg"
       >
         <div class="p-3">
           <div class="flex flex-wrap justify-center py-3">
+            <div class="w-full flex flex-wrap justify-center">
+              <img src="~/assets/images/logo/snapi-dblue.png" class="select-none h-10 w-auto flex" alt="logo" />
+            </div>
             <a
-              class="focus:outline-none focus:shadow-outline bg-gray-500 hover:bg-gray-600 text-white py-2 px-12 rounded-lg"
+              class="shadow-md flex flex-wrap justify-between items-center w-auto focus:outline-none focus:shadow-outline bg-gray-200 hover:bg-gray-300 text-gray-600 py-2 px-3 rounded mx-2 mt-3"
               href="/auth/google"
             >
-              <i class="fab fa-google fa-lg"></i>
+              <i class="fab fa-google fa-lg mr-2"></i>
+              <span>SignIn with Google</span>
             </a>
 
             <a
-              class="focus:outline-none focus:shadow-outline bg-gray-500 hover:bg-gray-600 text-white py-2 px-12 ml-3 rounded-lg"
+              class="shadow-md flex flex-wrap justify-between items-center w-auto focus:outline-none focus:shadow-outline bg-black hover:bg-gray-800 text-white py-2 px-3 rounded mx-2 mt-3"
               href="/auth/github"
             >
-              <i class="fab fa-github fa-lg"></i>
+              <i class="fab fa-github fa-lg mr-2"></i>
+              <span>SignIn with Github</span>
             </a>
           </div>
         </div>
-        <div class="px-3 pt-10 pb-4">
+        <div class="px-3 pt-0 pb-4">
+          <p class="w-full text-center text-primary-400 font-semibold text-xl">LogIn</p>
+          <p class="w-full text-center text-gray-500 font-normal text-sm mb-3">Email And Password Required</p>
           <input
             type="email"
             v-model.trim="login"
             ref="login"
             placeholder="Email"
-            class="focus:outline-none focus:shadow-outline py-2 px-4 my-1 w-full rounded-lg shadow-xl-e"
+            class="border border-solid border-gray-500 focus:outline-none focus:shadow-outline py-2 px-4 my-2 w-full rounded-lg shadow-xl-e"
             autocomplete="current-email"
             autofocus
           />
-          <div class="flex flex-row flex-wrap my-1 shadow-lg rounded-lg w-full">
+          <div class="flex flex-row flex-wrap my-2 shadow-lg rounded-lg w-full">
             <input
               :type="password_show ? 'text' : 'password'"
               v-model.trim="password"
               ref="password"
               placeholder="**********"
-              class="focus:outline-none focus:shadow-outline py-2 px-4 w-5/6 rounded-l-lg"
+              class="border border-solid border-gray-500 focus:outline-none focus:shadow-outline py-2 px-4 w-5/6 rounded-l-lg"
               autocomplete="current-password"
             />
             <button
-              class="focus:outline-none focus:shadow-outline bg-gray-600 hover:bg-gray-500 py-2 px-3 transition-1 w-1/6 rounded-r-lg text-white"
+              class="border border-solid border-gray-500 focus:outline-none focus:shadow-outline bg-gray-600 hover:bg-gray-500 py-2 px-3 transition-1 w-1/6 rounded-r-lg text-white"
               @click="password_show = !password_show"
             >
               <i :class="password_show ? 'fas fa-eye-slash' : 'fas fa-eye'"></i>
             </button>
           </div>
-          <div class="w-full flex flex-wrap flex-row py-3 justify-center py-2">
+
+          <div class="w-full flex flex-wrap flex-row justify-center py-4">
             <button
-              class="focus:outline-none focus:shadow-outline bg-primary-400 hover:bg-primary-200 rounded-lg text-white py-2 px-6 transition-1 shadow-md font-semibold"
+              class="focus:outline-none focus:shadow-outline bg-primary-400 hover:bg-primary-300 rounded text-white py-2 px-6 shadow-md font-normal"
               @click="login_form"
             >Login</button>
-            <button
-              class="focus:outline-none focus:shadow-outline bg-gray-600 hover:bg-gray-500 rounded-lg text-white py-2 px-6 ml-3 transition-1 shadow-md font-semibold"
-              @click="reset_form"
-            >Reset</button>
+            <router-link
+              tag="a" to="/register"
+              class="focus:outline-none focus:shadow-outline bg-gray-600 hover:bg-gray-500 rounded text-white py-2 px-6 ml-3 shadow-md font-normal"
+            >New To Snapi?</router-link>
           </div>
+
+          <div class="w-full flex flex-wrap justify-center">
+            <router-link tag="a" to="/login/reset-password" class="text-gray-600 font-semibold text-sm underline">Forgot Password?</router-link>
+          </div>
+
         </div>
       </div>
     </form>
@@ -98,27 +111,9 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .login_form {
   background: #2366ce;
 }
 
-@media (min-width: 1024px) {
-  body {
-    background: transparent;
-  }
-  .login_form {
-    background: transparent;
-  }
-}
-@media (min-width: 1480px) {
-  body {
-    background-size: 60% 730px;
-    background: url("../../assets/images/vectors/home-banner-blue-swirl.svg")
-      no-repeat;
-    background-position: 100.1% top;
-    width: 100%;
-    overflow-x: hidden;
-  }
-}
 </style>

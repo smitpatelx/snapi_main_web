@@ -4,23 +4,20 @@
     "password": "smitpatelx",
     "database": "nuxt_snapi",
     "host": "127.0.0.1",
-    "dialect": "postgres",
-    "operatorsAliases": false
+    "dialect": "postgres"
   },
   "test": {
     "username": "smit",
     "password": "smitpatelx",
     "database": "nuxt_snapi",
     "host": "127.0.0.1",
-    "dialect": "postgres",
-    "operatorsAliases": false
+    "dialect": "postgres"
   },
   "production": {
     "username": "smit",
     "password": "smitpatelx",
     "database": "nuxt_snapi",
     "host": "127.0.0.1",
-    "dialect": "postgres",
-    "operatorsAliases": false
+    "dialect": "postgres"
   }
 }

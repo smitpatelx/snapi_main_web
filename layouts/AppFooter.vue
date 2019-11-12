@@ -1,51 +1,49 @@
 <template>
   <div>
-    <footer class="font-sans bg-primary text-white py-4 md:py-8 px-2 md:px-4">
+    <footer class="font-sans bg-primary-500 text-white py-4 md:py-8 px-2 md:px-4">
       <div class="mx-auto container overflow-hidden flex flex-col md:flex-row content-center">
         <div
           class="w-full md:w-1/4 flex text-sm lg:text-base p-2 md:p-5 mt-2 md:mt-6 mr-4 md:mt-0 justify-center md:justify-end items-start"
         >
-          <a href="/" class="block text-center">
+          <router-link tag="a" to="/">
             <img
               src="~/assets/images/logo/ico1-inv-anim.svg"
               class="w-12 md:w-16"
               style="min-width:30px;"
               alt="logo"
             />
-          </a>
+          </router-link>
         </div>
         <div class="w-full md:w-3/4 flex text-sm lg:text-sm mt-6 md:mt-0 justify-center">
           <ul
             v-for="(page, index) in pages"
             :key="index"
-            class="list-reset font-thin w-full md:w-1/3 flex flex-wrap flex-col text-left px-2 md:px-6 content-center"
+            class="leading-none list-reset font-thin w-full md:w-1/3 flex flex-wrap flex-col text-left px-2 md:px-6 content-center"
           >
             <p
-              class="inline-block py-2 px-1 md:px-6 uppercase no-underline font-medium tracking-wide"
+              class="py-2 px-1 md:px-6 uppercase no-underline text-sm md:text-base font-bold tracking-wide text-white"
             >{{page.label}}</p>
-            <li v-for="(links, index2) in page.links" :key="index2">
+            <li v-for="(links, index2) in page.links" :key="index2" class="flex">
               <router-link
                 tag="a"
                 :to="links.link"
                 v-if="links.router_link"
-                class="text-gray-100 hover:text-gray-500 inline-block py-2 px-1 md:px-6 no-underline"
+                class="text-gray-400 hover:text-white font-medium py-2 mt-1 px-1 md:px-6 no-underline"
               >{{links.link_label}}</router-link>
               <a
                 :href="links.link"
                 v-else
-                class="text-gray-100 hover:text-gray-500 inline-block py-2 px-1 md:px-6 no-underline"
+                class="text-gray-400 hover:text-white font-medium py-2 mt-1 px-1 md:px-6 no-underline"
               >{{links.link_label}}</a>
             </li>
           </ul>
           <div class="w-full md:w-1/3 flex flex-wrap flex-col justify-start px-1 md:px-6 content-center">
-            <div
-              class="inline-block pt-2 pb-3 px-1 md:px-6 mx-auto uppercase font-medium tracking-wide"
-            >Get Help</div>
-            <div class="flex justify-start text-center content-between justify-between">
+            <p class="pt-2 pb-3 px-1 md:px-6 mx-auto uppercase text-sm md:text-base font-bold tracking-wide text-white">Get Help</p>
+            <div class="flex flex-wrap justify-start text-center content-between justify-between">
               <a
                 v-for="(social, index) in socials"
                 :key="index"
-                class="block flex items-center mx-3 no-underline text-white hover:text-gray-400"
+                class="flex items-center m-3 no-underline text-white hover:text-gray-400"
                 :href="social.href"
                 :target="social.target_blank ? 'blank' : 'self'"
               >
@@ -55,14 +53,13 @@
           </div>
         </div>
       </div>
-      <div class="text-lg pt-4 mt-4 text-center">
-        <a href="https://netdevv.com" class="hover:text-gray-300">©2019 Netdevv Co.</a>
-        <!-- <br />
-        <router-link
-          tag="a"
-          to="/terms"
-          class="text-gray-300 hover:text-blue-200 no-underline hover:underline"
-        >Terms of service</router-link> -->
+      <div class="flex text-lg pt-4 mt-4 mb-6 justify-center">
+        <a
+          href="https://netdevv.com"
+          target="_blank"
+          class="text-white hover:text-gray-300 underline cursor-pointer">
+          ©2019 Netdevv Co.
+        </a>
       </div>
     </footer>
   </div>
@@ -152,6 +149,12 @@ export default {
           href: "https://twitter.com/netdevv1",
           traget_blank: true,
           icon: "fab fa-twitter fa-2x"
+        },
+        {
+          link_label: "Instagram",
+          href: "https://www.instagram.com/netdevv/",
+          traget_blank: true,
+          icon: "fab fa-instagram fa-2x"
         }
       ]
     };

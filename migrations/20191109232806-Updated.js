@@ -1,9 +1,11 @@
 'use strict';
+
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('users', {
       id:{
         type: Sequelize.UUID,
+        defaultValue: Sequelize.UUIDV4,
         allowNull: false,
         unique: true,
         primaryKey: true
@@ -18,23 +20,23 @@ module.exports = {
       },
       title: {
         type: Sequelize.STRING(4),
-        allowNull: false
+        allowNull: true
       },
       address:{
         type: Sequelize.STRING(200),
-        allowNull: false
+        allowNull: true
       },
       state:{
         type: Sequelize.STRING(20),
-        allowNull: false
+        allowNull: true
       },
       country:{
         type: Sequelize.STRING(2),
-        allowNull: false
+        allowNull: true
       },
       pin_code:{
         type: Sequelize.STRING(10),
-        allowNull: false
+        allowNull: true
       },
       primary_email:{
         type: Sequelize.STRING,
@@ -72,7 +74,7 @@ module.exports = {
       },
       password:{
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
       },
       google_id:{
         type: Sequelize.STRING,
@@ -112,6 +114,7 @@ module.exports = {
       }
     });
   },
+
   down: (queryInterface, Sequelize) => {
     return queryInterface.dropTable('users');
   }
