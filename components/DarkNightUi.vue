@@ -18,7 +18,7 @@
       <slide-x-right-transition>
         <img
           class="shadow-xl rounded-lg"
-          :src="toogle ? `/_nuxt/assets/images/uidesign/light.png` : `/_nuxt/assets/images/uidesign/dark.png`"
+          :src="toogle ? '/uidesign/light.png' : '/uidesign/dark.png'"
           :alt="toogle ? 'light-ui' : 'dark-ui'"
         />
       </slide-x-right-transition>
