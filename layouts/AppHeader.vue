@@ -175,6 +175,7 @@ export default {
   }
 }
 
+
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
   .home-page-first-section {
     background: linear-gradient(118deg, #328bf2, #1644ad);
@@ -182,7 +183,7 @@ export default {
   }
 }
 
-@media only screen and (max-width: 1280px) and (min-width: 1479px)  {
+@media only screen and (min-width: 1280px) and (max-width: 1479px)  {
   .home-page-first-section {
     background: transparent !important;
     border-radius: 0%;

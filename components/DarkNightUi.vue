@@ -2,7 +2,7 @@
   <div class="flex flex-col flex-wrap p-0 lg:p-16 mt-0 lg:mt-4 w-full bg-swi">
     <div class="w-full text-center lg:text-center text-gray-500 flex flex-col py-4">
       <span
-        class="self-center border rounded-full flex items-center cursor-pointer w-12 outline-none"
+        class="focus:outline-none select-none self-center border rounded-full flex items-center cursor-pointer w-12 outline-none"
         :class="toogle ? 'bg-swi justify-end transition-1 border-primary' : 'bg-black justify-start transition-1 border-black'"
         @click="toogle = !toogle"
       >

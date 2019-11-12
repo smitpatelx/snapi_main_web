@@ -47,7 +47,7 @@ export default {
     background: transparent;
   }
 }
-@media only screen and (max-width: 1280px) and (min-width: 1479px)  {
+@media only screen and (min-width: 1280px) and (max-width: 1479px)  {
   .bg-main-page {
     // background: transparent;
     background-size: 60% 730px;
