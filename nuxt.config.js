@@ -65,14 +65,13 @@ module.exports = {
     // custom configuration
     hostname: 'https://snapi.netdevv.com',
     gzip: true,
-    exclude: [
-
+    sitemaps: [
+      {
+        path: '/sitemap.xml',
+        routes: ['/**',],
+        gzip: true
+      },
     ],
-    routes: [
-      '/',
-      '/login',
-      '/register',
-    ]
   },
   /*
    ** Build configuration
