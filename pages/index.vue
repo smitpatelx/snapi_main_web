@@ -144,7 +144,7 @@
           tag="a"
           to="docs"
           class="inline-block lg:px-5 lg:py-2 py-2 px-3 mb-4 lg:mb-0 mr-3 lg:mr-4 font-bold text-sm lg:text-base border border-solid border-primary-700 hover:border-primary-300 rounded-full text-primary-600 hover:text-primary-300"
-        >Read Docs for more</router-link>
+        >Read Docs for more <svg class="w-4 fill-current inline-block ml-1 text-primary-500" viewBox="0 0 172 172"><g stroke-miterlimit="10" font-family="none" font-size="none" font-weight="none" text-anchor="none" style="mix-blend-mode:normal"><path fill="none" d="M0 172V0h172v172z"/><path d="M20.64 6.88a3.447 3.447 0 00-3.44 3.44v123.84a3.438 3.438 0 003.44 3.44c41.482 0 57.875 9.232 61.92 12.04V22.897C74.068 16.327 55.793 6.88 20.64 6.88zm130.72 0c-35.153 0-53.428 9.447-61.92 16.017V149.64c4.045-2.808 20.452-12.04 61.92-12.04a3.43 3.43 0 003.44-3.44V10.32a3.438 3.438 0 00-3.44-3.44zM9.782 27.52C4.381 27.52 0 31.9 0 37.303v114.595c0 5.401 4.38 9.782 9.782 9.782h57.19C69.418 165.053 75.667 172 86 172c10.333 0 16.582-6.947 19.027-10.32h57.19a9.775 9.775 0 009.783-9.783V37.304c0-5.402-4.38-9.783-9.783-9.783h-.537v106.64c0 5.684-4.636 10.32-10.32 10.32-40.42 0-55.457 8.95-58.05 10.75l-.43.43c-2.392 1.895-3.494 4.945-6.772 4.945-3.28 0-3.83-2.755-6.665-4.73l-.753-.645c-2.593-1.8-17.603-10.75-58.05-10.75-5.684 0-10.32-4.636-10.32-10.32V27.52z"/></g></svg></router-link>
       </div>
     </div>
     <!-- Start News Letter -->

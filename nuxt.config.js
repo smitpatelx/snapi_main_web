@@ -54,7 +54,12 @@ module.exports = {
     ['vue-scrollto/nuxt', {
       duration: 700
     }],
+    'nuxt-purgecss',
   ],
+  purgeCSS: {
+    //https://regenrek.com/posts/how-to-use-tailwind-css-1.0.1-in-nuxt/#bonus-use-purgecss-to-remove-unused-css-in-the-production-build
+
+  },
   /*
    ** Build configuration
    */
@@ -69,6 +74,7 @@ module.exports = {
         import: ['~assets/style/style.scss']
       }
     },
+    extractCSS: true,
     /*
      ** You can extend webpack config here
      */

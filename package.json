@@ -27,7 +27,7 @@
     "vue-scrollto": "^2.17.1",
     "vue-tailwind": "^0.1.32",
     "vue2-transitions": "^0.3.0",
-    "vuex": "^3.1.1",
+    "vuex": "^3.1.2",
     "webpack": "^4.41.2"
   },
   "devDependencies": {
@@ -38,6 +38,7 @@
     "multer": "^1.4.2",
     "node-sass": "^4.13.0",
     "nodemon": "^1.19.4",
+    "nuxt-purgecss": "^0.2.1",
     "postcss-cssnext": "^3.1.0",
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
