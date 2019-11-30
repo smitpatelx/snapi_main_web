@@ -76,27 +76,15 @@
         </p>
       </div>
       <div class="text-lg lg:text-2xl py-4 my-2 flex flex-col lg:flex-row justify-center">
-        <div
-          class="p-2 subpixel-antialiased mx-5 my-2 lg:my-0 home-types-cards"
-          data-aos="fade-right"
-          data-aos-duration="1000"
-        >
+        <div class="p-2 subpixel-antialiased mx-5 my-2 lg:my-0 home-types-cards" >
           <p class="text-black">Semiannual</p>
           <p class="text-sm text-gray-500">Updates</p>
         </div>
-        <div
-          class="p-2 subpixel-antialiased mx-5 my-2 lg:my-0 home-types-cards"
-          data-aos="fade-down"
-          data-aos-duration="1000"
-        >
+        <div class="p-2 subpixel-antialiased mx-5 my-2 lg:my-0 home-types-cards" >
           <p class="text-black">4.9 k</p>
           <p class="text-sm text-gray-500">Downloads</p>
         </div>
-        <div
-          class="p-2 subpixel-antialiased mx-5 my-2 lg:my-0 home-types-cards"
-          data-aos="fade-left"
-          data-aos-duration="1000"
-        >
+        <div class="p-2 subpixel-antialiased mx-5 my-2 lg:my-0 home-types-cards" >
           <p class="text-black">Life-time</p>
           <p class="text-sm text-gray-500">Support</p>
         </div>
@@ -116,9 +104,6 @@
           class="w-full md:w-1/2 xl:w-1/3 flex flex-row px-1 lg:px-6 py-4 lg:py-8"
           v-for="(feature, index) in features"
           :key="index"
-          data-aos="zoom-out-down"
-          data-aos-duration="500"
-          :data-aos-delay="((index+1)*100)/3"
         >
           <div class="flex item-start py-2 pr-8">
             <i :class="feature.icon+' fa-3x text-blue-600'"></i>
