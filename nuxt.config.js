@@ -55,10 +55,24 @@ module.exports = {
       duration: 700
     }],
     'nuxt-purgecss',
+    '@nuxtjs/sitemap',
   ],
   purgeCSS: {
     //https://regenrek.com/posts/how-to-use-tailwind-css-1.0.1-in-nuxt/#bonus-use-purgecss-to-remove-unused-css-in-the-production-build
 
+  },
+  sitemap: {
+    // custom configuration
+    hostname: 'https://snapi.netdevv.com',
+    gzip: true,
+    exclude: [
+
+    ],
+    routes: [
+      '/',
+      '/login',
+      '/register',
+    ]
   },
   /*
    ** Build configuration
