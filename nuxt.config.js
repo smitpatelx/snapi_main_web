@@ -27,11 +27,11 @@ module.exports = {
     link: [
       {
         rel: 'icon',
-        href: '/favicon.ico'
+        href: 'favicon.ico',
       },
       {
         rel: 'apple-touch-icon-precomposed',
-        href: '/favicon.ico'
+        href: 'favicon.ico',
       }
     ]
   },
