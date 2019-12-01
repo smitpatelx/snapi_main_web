@@ -5,7 +5,7 @@
         :to="notification.link"
         @mouseenter.native="open"
         @mouseleave.native="exit"
-        class="cursor-pointer w-auto p-2 text-white leading-none rounded-full flex flex-wrap justify-center items-center bg-primary-800 border-2 border-solid border-white"
+        class="cursor-pointer w-auto p-2 text-white leading-none rounded-full flex flex-wrap justify-center items-center bg-primary-500 border-2 border-solid border-white"
       >
         <span class="rounded-full uppercase px-2 py-1 text-xs font-bold bg-primary-300" :class="is_open ? 'mr-3' : 'mr-0'">New 🎉</span>
         <slide-x-left-transition :duration="{enter: 500, leave: 0}">

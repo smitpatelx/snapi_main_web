@@ -1,5 +1,5 @@
 <template>
-  <div class="login_form">
+  <div class="bg-primary-500">
     <form class="flex flex-wrap flex-row justify-center py-10 px-4 md:px-2" method="post" @submit.prevent>
       <div
         class="border-2 border-solid border-gray-500 flex flex-col flex-wrap bg-white w-full sm:w-2/5 lg:w-1/4 text-center bg-white my-4 shadow-xl rounded-lg"
@@ -110,10 +110,3 @@ export default {
   created() {}
 };
 </script>
-
-<style lang="scss" scoped>
-.login_form {
-  background: #2366ce;
-}
-
-</style>

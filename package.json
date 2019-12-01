@@ -26,8 +26,8 @@
     "sequelize": "^5.21.2",
     "sequelize-cli": "^5.5.1",
     "vue-scrollto": "^2.17.1",
-    "vue-tailwind": "^0.1.32",
     "vue2-transitions": "^0.3.0",
+    "vuelidate": "^0.7.4",
     "vuex": "^3.1.2",
     "webpack": "^4.41.2"
   },

@@ -18,32 +18,30 @@
           <ul
             v-for="(page, index) in pages"
             :key="index"
-            class="leading-none list-reset font-thin w-full md:w-1/3 flex flex-wrap flex-col text-left px-2 md:px-6 content-center"
+            class="leading-none list-reset font-hairline w-full md:w-1/3 flex flex-wrap flex-col text-left px-2 md:px-6 content-center"
           >
-            <p
-              class="py-2 px-1 md:px-6 uppercase no-underline text-sm md:text-base font-bold tracking-wide text-white"
-            >{{page.label}}</p>
+            <p class="py-2 px-1 md:px-6 uppercase no-underline text-sm md:text-base font-bold tracking-wide text-white">{{page.label}}</p>
             <li v-for="(links, index2) in page.links" :key="index2" class="flex">
               <router-link
                 tag="a"
                 :to="links.link"
                 v-if="links.router_link"
-                class="text-gray-400 hover:text-white font-medium py-2 mt-1 px-1 md:px-6 no-underline"
+                class="text-gray-400 hover:text-white font-medium py-2 mt-1 px-1 md:px-6"
               >{{links.link_label}}</router-link>
               <a
                 :href="links.link"
                 v-else
-                class="text-gray-400 hover:text-white font-medium py-2 mt-1 px-1 md:px-6 no-underline"
+                class="text-gray-400 hover:text-white font-medium py-2 mt-1 px-1 md:px-6"
               >{{links.link_label}}</a>
             </li>
           </ul>
-          <div class="w-full md:w-1/3 flex flex-wrap flex-col justify-start px-1 md:px-6 content-center">
-            <p class="pt-2 pb-3 px-1 md:px-6 mx-auto uppercase text-sm md:text-base font-bold tracking-wide text-white">Get Help</p>
+          <div class="leading-none list-reset font-thin w-full md:w-1/3 flex flex-wrap flex-col justify-start px-1 md:px-6 content-center">
+            <p class="py-2 px-1 md:px-6 uppercase no-underline text-sm md:text-base font-bold tracking-wide text-white text-center">Get Help</p>
             <div class="flex flex-wrap justify-start text-center content-between justify-between">
               <a
                 v-for="(social, index) in socials"
                 :key="index"
-                class="flex items-center m-3 no-underline text-white hover:text-gray-400"
+                class="flex items-center w-full md:w-auto justify-center m-2 md:m-3 no-underline text-white hover:text-gray-400"
                 :href="social.href"
                 :target="social.target_blank ? 'blank' : 'self'"
               >
