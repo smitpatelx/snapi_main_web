@@ -40,12 +40,12 @@
             <router-link
               tag="a"
               to="register"
-              class="inline-block lg:inline-block lg:px-5 lg:py-2 py-2 px-3 mb-4 lg:mb-0 mr-3 lg:mr-4 font-bold text-sm lg:text-base border border-solid border-white lg:border-primary-700 rounded-lg lg:bg-primary-500 lg:hover:bg-primary-400 lg:text-white lg:hover:text-white hover:bg-gray-100 bg-white hover:text-primary-400 text-primary-500"
+              class="inline-block lg:inline-block lg:px-5 lg:py-2 py-2 px-3 mb-4 lg:mb-0 mr-3 lg:mr-4 font-bold text-sm lg:text-base border border-solid border-white lg:border-primary-700 rounded-sm lg:bg-primary-500 lg:hover:bg-primary-400 lg:text-white lg:hover:text-white hover:bg-gray-100 bg-white hover:text-primary-400 text-primary-500"
             >Register Now</router-link>
             <router-link
               tag="a"
               to="docs"
-              class="inline-block lg:inline-block lg:px-5 lg:py-2 py-2 px-3 mb-4 lg:mb-0 mr-3 lg:mr-4 font-bold text-sm lg:text-base border border-solid border-white lg:border-primary-500 hover:border-white lg:hover:border-primary-300 rounded-lg lg:text-primary-500 lg:hover:text-primary-300 text-white hover:text-gray-200"
+              class="inline-block lg:inline-block lg:px-5 lg:py-2 py-2 px-3 mb-4 lg:mb-0 mr-3 lg:mr-4 font-bold text-sm lg:text-base border border-solid border-white lg:border-primary-500 hover:border-white lg:hover:border-primary-300 rounded-sm lg:text-primary-500 lg:hover:text-primary-300 text-white hover:text-gray-200"
             >Read Documentation</router-link>
           </div>
         </div>
@@ -128,19 +128,15 @@
         >Read Docs for more</router-link>
       </div>
     </div>
-    <!-- Start News Letter -->
-    <news-letter></news-letter>
   </div>
 </template>
 
 <script>
 import DarkNightUi from "../components/DarkNightUi";
-import NewsLetter from "../components/NewsLetter";
 
 export default {
   components: {
     DarkNightUi,
-    NewsLetter
   },
   data() {
     return {
@@ -260,7 +256,7 @@ export default {
   min-width: 100px;
   border-radius: 0.5 rem;
   border: 2px solid transparent;
-  border-image: url(~assets/images/vectors/dash-border-primary.svg) 1 round;
+  border-image: url(~assets/images/vectors/dash-border-primary.svg) 2 round;
 
   &:after,
   &:before {

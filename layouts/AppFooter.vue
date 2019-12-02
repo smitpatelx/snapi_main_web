@@ -1,53 +1,58 @@
 <template>
   <div>
+    <!-- Start News Letter -->
+    <news-letter></news-letter>
+    <!-- Start Footer -->
     <footer class="font-sans bg-primary-500 text-white py-4 md:py-8 px-2 md:px-4">
       <div class="mx-auto container overflow-hidden flex flex-col md:flex-row content-center">
         <div
-          class="w-full md:w-1/4 flex text-sm lg:text-base p-2 md:p-5 mt-2 md:mt-6 mr-4 md:mt-0 justify-center md:justify-end items-start"
+          class="w-full md:w-1/4 flex flex-wrap text-sm lg:text-base p-2 md:pl-5 mt-2 md:mt-0 justify-center md:justify-start items-start text-left"
         >
           <router-link tag="a" to="/">
             <img
-              src="~/assets/images/logo/ico1-inv-anim.svg"
-              class="w-12 md:w-16"
+              src="~/assets/images/logo/snapi-white.svg"
+              class="h-10 md:h-14"
               style="min-width:30px;"
               alt="logo"
             />
           </router-link>
+          <p class="text-base font-light text-white mt-4">
+            Snapi was created by Netdevv Team. Initial version of snapi was used internally. As we advanced our development, we were able to make this project public.
+          </p>
+          <p class="text-lg font-semibold text-white mt-2">
+            Join us on this amazing journey.
+          </p>
         </div>
-        <div class="w-full md:w-3/4 flex text-sm lg:text-sm mt-6 md:mt-0 justify-center">
+        <div class="w-full md:w-3/4 flex flex-wrap text-sm lg:text-sm mt-6 md:mt-0 justify-center">
           <ul
             v-for="(page, index) in pages"
             :key="index"
-            class="leading-none list-reset font-hairline w-full md:w-1/3 flex flex-wrap flex-col text-left px-2 md:px-6 content-center"
+            class="leading-none list-reset font-hairline w-1/2 md:w-1/3 flex flex-wrap flex-col text-left pl-2 md:pl-6 content-start md:content-center"
           >
-            <p class="py-2 px-1 md:px-6 uppercase no-underline text-sm md:text-base font-bold tracking-wide text-white">{{page.label}}</p>
+            <p class="py-2 px-1 lg:px-6 uppercase no-underline text-sm md:text-base font-bold tracking-wide text-white">{{page.label}}</p>
             <li v-for="(links, index2) in page.links" :key="index2" class="flex">
               <router-link
                 tag="a"
                 :to="links.link"
                 v-if="links.router_link"
-                class="text-gray-400 hover:text-white font-medium py-2 mt-1 px-1 md:px-6"
+                class="text-gray-400 hover:text-white font-medium py-2 mt-1 px-1 lg:px-6"
               >{{links.link_label}}</router-link>
               <a
                 :href="links.link"
                 v-else
-                class="text-gray-400 hover:text-white font-medium py-2 mt-1 px-1 md:px-6"
+                class="text-gray-400 hover:text-white font-medium py-2 mt-1 px-1 lg:px-6"
               >{{links.link_label}}</a>
             </li>
           </ul>
-          <div class="leading-none list-reset font-thin w-full md:w-1/3 flex flex-wrap flex-col justify-start px-1 md:px-6 content-center">
-            <p class="py-2 px-1 md:px-6 uppercase no-underline text-sm md:text-base font-bold tracking-wide text-white text-center">Get Help</p>
-            <div class="flex flex-wrap justify-start text-center content-between justify-between">
-              <a
-                v-for="(social, index) in socials"
-                :key="index"
-                class="flex items-center w-full md:w-auto justify-center m-2 md:m-3 no-underline text-white hover:text-gray-400"
-                :href="social.href"
-                :target="social.target_blank ? 'blank' : 'self'"
-              >
-                <i :class="social.icon"></i>
-              </a>
-            </div>
+          <div class="leading-none list-reset font-thin w-full md:w-1/3 hidden md:flex flex-wrap flex-col justify-start pl-2 md:pl-6 content-center">
+            <p class="py-2 px-1 lg:px-6 uppercase no-underline text-sm md:text-base font-bold tracking-wide text-white">Contact Us</p>
+            <a class="text-gray-400 hover:text-white font-medium py-2 mt-1 px-1 lg:px-6 items-center flex flex-wrap" href="mailto:support@netdevv.com">
+              support@netdevv.com
+            </a>
+            <a class="text-gray-400 hover:text-white font-medium py-2 mt-1 px-1 lg:px-6 items-center flex flex-wrap" href="https://g.page/netdevv?share" target="_blank">
+              <svg class="inline-block w-4 h-4 fill-current mr-1" viewBox="0 0 20 20"><path d="M21 3L3 10.53v.98l6.84 2.65L12.48 21h.98L21 3z"/></svg>
+              GTA, Canada
+            </a>
           </div>
         </div>
       </div>
@@ -64,7 +69,12 @@
 </template>
 
 <script>
+import NewsLetter from "../components/NewsLetter";
+
 export default {
+  components: {
+    NewsLetter
+  },
   data() {
     return {
       pages: [
@@ -127,32 +137,6 @@ export default {
               router_link: true
             }
           ]
-        }
-      ],
-      socials: [
-        {
-          link_label: "Github",
-          href: "https://github.com/smitpatelx",
-          traget_blank: true,
-          icon: "fab fa-github fa-2x"
-        },
-        {
-          link_label: "Discord",
-          href: "https://discord.gg/nFTec5q",
-          traget_blank: true,
-          icon: "fab fa-discord fa-2x"
-        },
-        {
-          link_label: "Twitter",
-          href: "https://twitter.com/netdevv1",
-          traget_blank: true,
-          icon: "fab fa-twitter fa-2x"
-        },
-        {
-          link_label: "Instagram",
-          href: "https://www.instagram.com/netdevv/",
-          traget_blank: true,
-          icon: "fab fa-instagram fa-2x"
         }
       ]
     };

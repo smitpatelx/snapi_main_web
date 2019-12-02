@@ -45,7 +45,7 @@
               <router-link
                 tag="a"
                 to="/register"
-                class="select-none bg-transparent hover:bg-white text-white font-semibold hover:text-blue-600 py-2 px-3 border border-white hover:border-transparent rounded"
+                class="select-none bg-transparent hover:bg-white text-white font-semibold hover:text-primary-500 py-2 px-3 border border-white hover:border-transparent rounded"
               >Register</router-link>
             </li>
           </div>
