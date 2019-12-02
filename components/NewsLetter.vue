@@ -91,7 +91,7 @@ export default {
 </script>
 <style lang="scss" scoped>
   .bg-dot-glass{
-    background-image: url('~static/vecotrs/dot-glass.svg');
+    background-image: url('~static/vecotrs/dot-glass-min.png');
     background-repeat: no-repeat;
     background-position: left center;
     background-attachment: scroll;
