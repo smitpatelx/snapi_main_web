@@ -142,81 +142,82 @@ export default {
     return {
       features: [
         {
-          icon: "fas fa-search",
-          heading: "Advance queries",
+          icon: "far fa-comment-alt",
+          heading: "Live Chat",
+          new: true,
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quasi ullam in at laudantium? Exercitationem, quas maiores aspernatur necessitatibus officiis neque aliquam qui soluta recusandae, mollitia, minima voluptatem eveniet minus!"
-        },
-        {
-          icon: "fab fa-think-peaks",
-          heading: "Actions",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quasi ullam in at laudantium? Exercitationem, quas maiores aspernatur necessitatibus officiis neque aliquam qui soluta recusandae, mollitia, minima voluptatem eveniet minus!"
+            "Live chat implementations, with ability to create custom chat rooms and supports both group and private chat."
         },
         {
           icon: "fas fa-filter",
           heading: "Advance filters",
           new: true,
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quasi ullam in at laudantium? Exercitationem, quas maiores aspernatur necessitatibus officiis neque aliquam qui soluta recusandae, mollitia, minima voluptatem eveniet minus!"
-        },
-        {
-          icon: "fas fa-bars",
-          heading: "CRUD views",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quasi ullam in at laudantium? Exercitationem, quas maiores aspernatur necessitatibus officiis neque aliquam qui soluta recusandae, mollitia, minima voluptatem eveniet minus!"
+            "Filter your data with graphql backend which will result into quick response from the backend. Out of the box support for array-filters. Filter your data however you want."
         },
         {
           icon: "far fa-folder",
           heading: "SNAPI media",
           new: true,
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quasi ullam in at laudantium? Exercitationem, quas maiores aspernatur necessitatibus officiis neque aliquam qui soluta recusandae, mollitia, minima voluptatem eveniet minus!"
-        },
-        {
-          icon: "fas fa-fingerprint",
-          heading: "JWT auth & providers",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quasi ullam in at laudantium? Exercitationem, quas maiores aspernatur necessitatibus officiis neque aliquam qui soluta recusandae, mollitia, minima voluptatem eveniet minus!"
+            "Upload your content from a single backend. SNAPI media will resemble the LINUX directory structure and users with appropriate permission can restrict other users from deleting data and many more."
         },
         {
           icon: "far fa-bell",
           heading: "Live Notifications",
           new: true,
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quasi ullam in at laudantium? Exercitationem, quas maiores aspernatur necessitatibus officiis neque aliquam qui soluta recusandae, mollitia, minima voluptatem eveniet minus!"
+            "Support for live notifications and notifications state management with http requests. Notification queue allow you to schedule notifications."
         },
         {
           icon: "fas fa-sliders-h",
           heading: "Auto API resources",
           new: true,
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quasi ullam in at laudantium? Exercitationem, quas maiores aspernatur necessitatibus officiis neque aliquam qui soluta recusandae, mollitia, minima voluptatem eveniet minus!"
+            "We auto generate APIs for your front-end which can be customized later."
+        },
+        {
+          icon: "fas fa-search",
+          heading: "Advance queries",
+          description:
+            "Advance query support out of the box with Graphql and Postgres. Querying data from your front-end was never been this easy."
+        },
+        {
+          icon: "fab fa-think-peaks",
+          heading: "Actions",
+          description:
+            "Add custom actions from your backend, which includes email queuing. Scheduling posts and notifications become easy with snapi."
+        },
+        {
+          icon: "fas fa-fingerprint",
+          heading: "JWT auth & providers",
+          description:
+            "Out of the box supports JWT Authentication, Google, Twitter, Facebook, Github and Local Authentication Strategies."
         },
         {
           icon: "fab fa-wpforms",
           heading: "Custom Fields",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quasi ullam in at laudantium? Exercitationem, quas maiores aspernatur necessitatibus officiis neque aliquam qui soluta recusandae, mollitia, minima voluptatem eveniet minus!"
+            "Generate forms with custom fields and custom rules to make it easy to manage your data."
         },
         {
           icon: "fab fa-searchengin",
           heading: "SEO Implementation",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quasi ullam in at laudantium? Exercitationem, quas maiores aspernatur necessitatibus officiis neque aliquam qui soluta recusandae, mollitia, minima voluptatem eveniet minus!"
+            "Google Search Console integration with SEO best practices. Responsive design for all devices and leveraging browser cache for optimal performance out of the box."
         },
         {
           icon: "fas fa-lock",
           heading: "CORS Implementation",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quasi ullam in at laudantium? Exercitationem, quas maiores aspernatur necessitatibus officiis neque aliquam qui soluta recusandae, mollitia, minima voluptatem eveniet minus!"
+            "Restrict spammers and hackers to use your API and save your server resources by implementing CORS Policy."
         },
         {
           icon: "far fa-edit",
           heading: "Editor Panel",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quasi ullam in at laudantium? Exercitationem, quas maiores aspernatur necessitatibus officiis neque aliquam qui soluta recusandae, mollitia, minima voluptatem eveniet minus!"
-        }
+            "We provide a great user experience by implementing block style editor which also supports markdown. Editor panel is responsive, so no matter which device you have, you will be able to edit your content."
+        },
       ]
     };
   }

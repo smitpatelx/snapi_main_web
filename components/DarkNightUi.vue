@@ -60,7 +60,7 @@ export default {
           icon: "fab fa-superpowers",
           heading: "Vue.js + Node = ❤",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem quasi ullam in at laudantium? Exercitationem, quas maiores aspernatur necessitatibus officiis neque aliquam qui soluta recusandae, mollitia, minima voluptatem eveniet minus!"
+            "In 2020-25 it make more sense to use Vuejs. We are constantly updating our platform with latest updates. We will release security patches ASAP. We are planning to launch this platform with vue 3."
         },
         {
           icon: "fas fa-code",

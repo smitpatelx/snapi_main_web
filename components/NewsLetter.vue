@@ -12,10 +12,10 @@
               <svg class="inline-block fill-current h-4 w-4" :class="$v.email.$error && $v.email.$anyDirty ? 'skew-45' : 'skew-0'" viewBox="0 0 14 14"><path d="M14 8H8v6H6V8H0V6h6V0h2v6h6v2z"/></svg>
             </button>
           </form>
-          <div v-if="$v.$error" class="leading-tight text-sm text-red-500 w-full justify-center text-center py-3" >
-            <p v-if="!$v.email.required && $v.email.$anyDirty" class="relative pl-1">Email Required</p>
-            <p v-if="!$v.email.email && $v.email.$anyDirty" class="relative pl-1">Invalid Email Address</p>
-            <p v-if="!$v.email.minLength && $v.email.$anyDirty" class="relative pl-1">Email Address Must Be Greater Than {{ $v.email.$params.minLength.min }}</p>
+          <div v-if="$v.$error" class="leading-tight text-sm text-red-500 w-full hidden md:flex md:flex-wrap absolute justify-center text-center" style="bottom:-1.5rem;">
+            <p v-if="!$v.email.required && $v.email.$anyDirty" class="w-full pl-1 mb-1">Email Required</p>
+            <p v-if="!$v.email.email && $v.email.$anyDirty" class="w-full pl-1 mb-1">Invalid Email Address</p>
+            <p v-if="!$v.email.minLength && $v.email.$anyDirty" class="w-full pl-1 mb-1">Email Address Must Be Greater Than {{ $v.email.$params.minLength.min }}</p>
           </div>
         </div>
         <div class="w-full md:w-1/4 lg:w-1/3 flex flex-wrap items-center justify-center pt-2 md:pt-0 lg:px-3 relative">
@@ -35,6 +35,7 @@
 </template>
 <script>
 import { required, email, minLength } from 'vuelidate/lib/validators';
+import { async } from 'q';
 export default {
     data(){
         return{
@@ -78,10 +79,16 @@ export default {
     methods:{
       submit(){        
         if(!this.$v.$invalid){
-          console.log("Submit");
           this.$v.$reset();
           this.email=null;
           this.$refs.email.focus();
+          this.$notify({
+            group: 'main',
+            title: 'Subscribed',
+            text: "You are awesome. We won't let you down.",
+            type: 'success',
+            'animation-name':'slide-left'
+          });
         } else {
           this.$v.$reset();
         }

@@ -1,5 +1,8 @@
 <template>
   <div :class="currentRoute === 'index' ? 'bg-main-page' : ''">
+    <fade-transition :duration="600" tag="div" class="fixed w-full flex items-center justify-end">
+      <notifications group="main"/>
+    </fade-transition>
     <AppHeader></AppHeader>
     <fade-transition origin="center" mode="out-in" :duration="600">
       <nuxt />
