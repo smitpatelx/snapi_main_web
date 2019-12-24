@@ -35,7 +35,7 @@
 </template>
 <script>
 import { required, email, minLength } from 'vuelidate/lib/validators';
-import { async } from 'q';
+// import { async } from 'q';
 export default {
     data(){
         return{

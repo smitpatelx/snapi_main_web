@@ -2,49 +2,12 @@ require('dotenv').config();
 var env = process.env;
 
 const express = require('express')
-const bodyParser = require('body-parser')
 const consola = require('consola')
-const session = require('express-session')
-const passport = require('passport')
-const cookieSession = require('cookie-session')
 const app = express()
-const authRoutes = require('./routes/auth');
 const {
   Nuxt,
   Builder
 } = require('nuxt')
-
-//Database Connect
-require('./database/test_db');
-
-// for parsing application/json
-app.use(bodyParser.json());
-// for parsing application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({
-  extended: false
-}));
-
-// app.use(express.json());
-// app.use(express.urlencoded({
-//   extended: false
-// }));
-
-app.use(cookieSession({
-  maxAge: 30*24*60*60*1000,
-  keys: [env.PASSPORT_SECRET]
-}));
-
-// app.use(session({
-//   secret: env.PASSPORT_SECRET,
-//   resave: true,
-//   saveUninitialized: true
-// }));
-
-app.use(passport.initialize());
-app.use(passport.session());
-require('./config/passport-config');
-//Auth routes setup
-app.use('/auth', authRoutes);
 
 // Import and Set Nuxt.js options
 const config = require('../nuxt.config.js')

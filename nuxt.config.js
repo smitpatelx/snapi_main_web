@@ -56,12 +56,14 @@ module.exports = {
    */
   modules: [
     // Or if you have custom options...
+    '@nuxtjs/axios',
     ['vue-scrollto/nuxt', {
       duration: 700
     }],
     'nuxt-purgecss',
     '@nuxtjs/sitemap',
   ],
+
   purgeCSS: {
     //https://regenrek.com/posts/how-to-use-tailwind-css-1.0.1-in-nuxt/#bonus-use-purgecss-to-remove-unused-css-in-the-production-build
 
